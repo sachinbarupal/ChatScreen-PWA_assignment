@@ -8,7 +8,6 @@ import InputBox from "./InputBox";
 const Chat: React.FC = () => {
   const [messages, setMessages] = useState<any[]>([]);
   const [page, setPage] = useState<number>(0);
-  const [newMessage, setNewMessage] = useState<string>("");
   useEffect(() => {
     fetchMessages();
   }, []);
@@ -22,13 +21,6 @@ const Chat: React.FC = () => {
       setPage((page) => page + 1);
     } catch (error) {
       console.error("Error fetching messages:", error);
-    }
-  };
-
-  const handleSendMessage = () => {
-    if (newMessage.trim()) {
-      setMessages([...messages, { sender: "You", message: newMessage }]);
-      setNewMessage("");
     }
   };
 

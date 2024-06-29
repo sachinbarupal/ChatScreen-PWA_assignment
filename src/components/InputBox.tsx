@@ -1,4 +1,4 @@
-import { Box, Flex, IconButton, Input } from "@chakra-ui/react";
+import { Box, Flex, IconButton } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 import { GoPaperclip } from "react-icons/go";
 import { IoCameraOutline } from "react-icons/io5";
