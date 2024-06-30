@@ -18,6 +18,7 @@ const Chat: React.FC = () => {
         `https://qa.corider.in/assignment/chat?page=${page}`
       );
       setMessages((prevMessages) => [...response.data.chats, ...prevMessages]);
+      // console.log(response.data.chats);
       setPage((page) => page + 1);
     } catch (error) {
       console.error("Error fetching messages:", error);
@@ -29,13 +30,14 @@ const Chat: React.FC = () => {
       height="100vh"
       display="flex"
       flexDirection="column"
-      marginTop="145px"
-      marginBottom="16px"
+      // className=" mt-[140px]"
+      // marginTop="145px"
+      // className="h-[calc(100vh-7rem)]"
       bg="#FAF9F4"
     >
       <div
         id="scrollableDiv"
-        className=" p-4 overflow-auto flex flex-col-reverse"
+        className=" p-4 overflow-auto flex flex-col-reverse overscroll-auto mt-[145px]"
       >
         <InfiniteScroll
           dataLength={messages.length}
@@ -46,7 +48,7 @@ const Chat: React.FC = () => {
           loader={<h1 className=" text-center font-bold">Loading...</h1>}
           scrollableTarget="scrollableDiv"
         >
-          <VStack spacing={4} mb={50}>
+          <VStack spacing={4} className=" mb-[70px] ">
             {messages.map((message) => (
               <Message
                 key={message.id}

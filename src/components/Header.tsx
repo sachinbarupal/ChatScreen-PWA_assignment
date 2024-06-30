@@ -45,6 +45,7 @@ const Header: React.FC = () => {
       top={0}
       left={0}
       right={0}
+      // height="0px"
       zIndex={10}
       borderBottom="1px solid #E5E5E0"
       w="full"

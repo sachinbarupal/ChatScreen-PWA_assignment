@@ -5,7 +5,7 @@ import Chat from "./components/Chat";
 
 const App: React.FC = () => {
   return (
-    <Box overflowY="hidden">
+    <Box>
       <Header />
       <Chat />
     </Box>
