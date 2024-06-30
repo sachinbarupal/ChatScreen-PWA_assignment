@@ -29,7 +29,6 @@ const Header: React.FC = () => {
       const response = await axios.get(
         `https://qa.corider.in/assignment/chat?page=0`
       );
-      // console.log(response.data);
       setTo(response.data.to);
       setName(response.data.name);
       setFrom(response.data.from);
@@ -40,13 +39,10 @@ const Header: React.FC = () => {
 
   return (
     <Flex
+      bg="#FAF9F4"
       alignItems="center"
-      p={4}
-      bg="white"
-      boxShadow="md"
       position="fixed"
       top={0}
-      // height="2%"
       left={0}
       right={0}
       zIndex={10}
@@ -77,7 +73,7 @@ const Header: React.FC = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="size-6"
+          className=" size-8 mr-1 cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -94,7 +90,11 @@ const Header: React.FC = () => {
         className=" gap-4"
       >
         <Flex alignItems="center">
-          <Avatar src="https://via.placeholder.com/40" size="md" />
+          <Avatar
+            src="https://img.freepik.com/free-photo/medium-shot-people-with-glasses-posing-studio_23-2150169333.jpg"
+            size="md"
+            cursor="pointer"
+          />
           <Box ml={3} flex={1}>
             <Text>
               From <span className=" text-lg font-bold">{from}</span>

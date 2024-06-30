@@ -21,7 +21,7 @@ const Message: React.FC<MessageProps> = ({ message, sender }) => {
       alignItems="flex-start"
     >
       {!sender.self && (
-        <Avatar src={sender.image} size="sm">
+        <Avatar cursor="pointer" src={sender.image} size="sm">
           {sender.is_kyc_verified && (
             <AvatarBadge boxSize="1.25em" border="none">
               <VscVerifiedFilled color="blue" fontSize="14px" />

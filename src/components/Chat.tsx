@@ -31,6 +31,7 @@ const Chat: React.FC = () => {
       flexDirection="column"
       marginTop="145px"
       marginBottom="16px"
+      bg="#FAF9F4"
     >
       <div
         id="scrollableDiv"

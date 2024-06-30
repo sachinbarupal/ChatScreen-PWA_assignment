@@ -14,6 +14,7 @@ const InputBox: React.FC<InputBoxProps> = ({ setMessages }) => {
   const newMessage = useRef<HTMLInputElement>(null);
 
   const handleSend = (): void => {
+    if (newMessage.current?.value === "") return;
     const msg = {
       sender: {
         self: true,
@@ -28,7 +29,7 @@ const InputBox: React.FC<InputBoxProps> = ({ setMessages }) => {
       <Flex className="px-3 py-[11px] gap-4 relative" bg="white">
         <input
           ref={newMessage}
-          className="  rounded-lg border-none outline-none focus:outline-none flex-1"
+          className="  rounded-lg border-none outline-none focus:outline-none flex-1 text-[#B7B7B7]"
           placeholder="Type a message"
         />
         {showOptions && (
